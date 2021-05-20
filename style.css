@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
+.loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid var(--yellow); 
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    margin: 45em 45em;
+    z-index: 1;
+    position: absolute;
+    animation: spin 2s linear infinite;
+    animation-name:spin;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 :root{
     --yellow:#f9ca24;
 }

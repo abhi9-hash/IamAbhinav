@@ -36,3 +36,31 @@ $(document).ready(function(){
   });
 
 });
+
+//contact form
+
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+      response=> response.json()
+    ).then((html)  =>{
+      alert('message sent successfully')
+      window.location.href = 'https://abhi9-hash.github.io/IamAbhinav/';
+    });
+  });
+
+  //loading screen
+
+  const loader = document.querySelector(".loader");
+         window.onload = function(){
+           setTimeout(function(){
+             loader.style.opacity = "0";
+             setTimeout(function(){
+               loader.style.display = "none";
+             }, 500);
+           },1500);
+         }
