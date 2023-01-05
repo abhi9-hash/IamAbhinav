@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
-.loader {
+/* .loader {
     border: 16px solid #f3f3f3; 
     border-top: 16px solid var(--yellow); 
     border-radius: 50%;
@@ -11,12 +11,26 @@
     position: absolute;
     animation: spin 2s linear infinite;
     animation-name:spin;
-  }
+  } */
   
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+  .cover{
+    animation: down 2s;
+}
+
+@keyframes down {
+    0%{
+        transform: translateY(-150px);
+        opacity: 0;
+        transition: all 2s ease;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+    
+}
 
 :root{
     --yellow:#f9ca24;
